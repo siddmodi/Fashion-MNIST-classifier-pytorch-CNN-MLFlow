@@ -1,0 +1,26 @@
+Log_folder : "Logs"
+
+Data:
+  root_data_folder: Data
+  predicted_data: Prediction
+  prediction_file: prediction.txt
+
+artifacts:
+  model: artifacts
+  base_model: base_model.pth
+  trained_model: trained_model.pth
+  confusion_matrix_fig: confusion_matrix.png
+
+params:
+  input : 1
+  output : 10
+  BATCH_SIZE: 32
+  LR: 0.001
+  IMAGE_SIZE: (28,28)
+  SEED: 2022
+  no_of_test_data_batches_for_prediction: 3  # 32 or BATCH_SIZE img per no_of_test_data_batches_for_prediction
+
+Epoch: 1
+
+evaluation:
+  no_of_test_batches: 1 #1 batch contain batch_size images
