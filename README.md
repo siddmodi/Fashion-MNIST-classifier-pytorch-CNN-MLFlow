@@ -38,3 +38,24 @@ bash init_setup.sh
 ```
 pip install -e .
 ``` 
+
+========================== Explaination ===========================
+
+Flask app asking to upload picture and it'll predict out of 10 fashion product what it is.
+
+We use MLops pipeline for this project to smoothen the process and seprate each stage from each other 
+
+This project we divided in 5 stages. we use pytorch to define our architecture
+
+1) To get fashion mnist data and use data loader class to load train and test images
+
+2) Define a CNN archeitecture with convolutional filter ,Relu activation function and maxpooling layer ,Also create a forward pass layer.
+ 	 after creating a base model, we dump that model in respective folder
+
+3) Here we train our base model with train data using Adam optimizer, also define backward pass layer save trained model in respective folder
+
+4) Here we test our trained model with untrained data and tell what's its actual and predicted class
+
+we create utils directory for all types of function such as some common , data management and for evaluating model. 
+We also consider the situation if we stuck anywhere by creating log files for each and every steps for each stage
+
